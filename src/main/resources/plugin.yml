@@ -6,3 +6,9 @@ commands:
    su:
       description: Executes command on another server
       usage: /<command> <server> <command_to_send>
+   tp:
+      description: Teleport cross-server.
+      usage: /<command> <player> [toplayer]
+   tphere:
+      description: Teleport a player cross-server to you.
+      usage: /<command> <player>
