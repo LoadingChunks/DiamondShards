@@ -57,7 +57,7 @@ public class DiamondShards extends JavaPlugin {
 	public Coil getCoilAPI() {
 		if(this.coil == null)
 		{
-			RegisteredServiceProvider<Coil> provider = getServer().getServicesManager().getRegistration(Coil.class);
+			RegisteredServiceProvider<Coil> provider = getServer().getServicesManager().getRegistration(net.LoadingChunks.SpringCoil.api.Coil.class);
 	        Coil api = provider.getProvider();
 	        this.coil = api;
 		}
