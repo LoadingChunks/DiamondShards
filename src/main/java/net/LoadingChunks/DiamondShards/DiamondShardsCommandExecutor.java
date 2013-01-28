@@ -33,9 +33,10 @@ public class DiamondShardsCommandExecutor implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (command.getName().equalsIgnoreCase("su")) {
-            if(args.length > 2)
+            if(args.length >= 2)
             {
             	this.plugin.getCoilAPI().sendToServer(args[0], args[1]);
+            	return true;
             }
         }
         return false;

@@ -5,4 +5,4 @@ version: 0.1
 commands:
    su:
       description: Executes command on another server
-      usage: /<command> <server> <command>
+      usage: /<command> <server> <command_to_send>
