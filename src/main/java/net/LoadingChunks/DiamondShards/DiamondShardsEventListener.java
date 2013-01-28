@@ -38,10 +38,5 @@ public class DiamondShardsEventListener implements Listener {
 
 	// All event handlers must be marked with the @EventHandler annotation 
 	// The method name does not matter, only the type of the event parameter
-	// is used to distinguish what is handled.
-
-	@EventHandler
-	public void onBlockPlace(BlockPlaceEvent event) {
-		Bukkit.getServer().broadcastMessage("Player " + event.getPlayer().getName() + " placed " + event.getBlock().getType() + " at " + event.getBlock().getLocation());
-	}
+	// is used to distinguish what is handled.	
 }

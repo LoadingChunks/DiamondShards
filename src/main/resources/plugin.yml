@@ -1,6 +1,7 @@
 name: DiamondShards
 main: net.LoadingChunks.DiamondShards.DiamondShards
 version: 0.1
+depend: [SpringCoil]
 
 commands:
    su:
