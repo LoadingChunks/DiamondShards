@@ -37,6 +37,9 @@ public class DiamondShardsCommandExecutor implements CommandExecutor {
             {
             	this.plugin.getCoilAPI().sendToServer(args[0], args[1]);
             	return true;
+            } else {
+            	sender.sendMessage("You must specify a server and a command!");
+            	return false;
             }
         }
         return false;
