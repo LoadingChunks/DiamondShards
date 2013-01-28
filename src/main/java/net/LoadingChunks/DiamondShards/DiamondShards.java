@@ -30,8 +30,8 @@ public class DiamondShards extends JavaPlugin {
 	// Find way to communicate with BungeeCord
 
 	//ClassListeners
-	private final DiamondShardsCommandExecutor commandExecutor = new DiamondShardsCommandExecutor(this);
-	private final DiamondShardsEventListener eventListener = new DiamondShardsEventListener(this);
+	private DiamondShardsCommandExecutor commandExecutor;
+	private DiamondShardsEventListener eventListener;
 	//ClassListeners
 	
 	private Coil coil;
@@ -43,6 +43,9 @@ public class DiamondShards extends JavaPlugin {
 	public void onEnable() { 
 
 		PluginManager pm = this.getServer().getPluginManager();
+		
+		commandExecutor = new DiamondShardsCommandExecutor(this);
+		eventListener = new DiamondShardsEventListener(this); 
 
 		getCommand("tp").setExecutor(commandExecutor);
 		getCommand("tphere").setExecutor(commandExecutor);
