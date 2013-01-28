@@ -35,7 +35,7 @@ public class DiamondShardsCommandExecutor implements CommandExecutor {
         if (command.getName().equalsIgnoreCase("su")) {
             if(args.length >= 2)
             {
-            	this.plugin.getCoilAPI().sendToServer(args[0], args[1]);
+            	this.plugin.getCoilAPI().sendToServer(args[0], "DiamondShards", args[1]);
             	return true;
             } else {
             	sender.sendMessage("You must specify a server and a command!");
