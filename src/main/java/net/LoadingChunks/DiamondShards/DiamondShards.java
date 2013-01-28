@@ -55,11 +55,17 @@ public class DiamondShards extends JavaPlugin {
 	}
 	
 	public Coil getCoilAPI() {
-		if(this.coil == null)
+		try {
+			if(this.coil == null)
+			{
+				RegisteredServiceProvider<Coil> provider = getServer().getServicesManager().getRegistration(net.LoadingChunks.SpringCoil.api.Coil.class);
+				Coil api = provider.getProvider();
+				this.coil = api;
+			}
+		} catch(Exception e)
 		{
-			RegisteredServiceProvider<Coil> provider = getServer().getServicesManager().getRegistration(net.LoadingChunks.SpringCoil.api.Coil.class);
-	        Coil api = provider.getProvider();
-	        this.coil = api;
+			this.getLogger().severe("[DIAMONDSHARDS] Something went wrong while trying to register the SpringCoil API!");
+			e.printStackTrace();
 		}
 		return this.coil;
 	}
